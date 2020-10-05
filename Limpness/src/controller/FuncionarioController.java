@@ -10,6 +10,7 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
@@ -83,6 +84,9 @@ public class FuncionarioController extends Application{
 	private void limpaCampos() {
 		tx_salario_funcionario.clear();
 		tx_email_funcionario.clear();
+		tx_telefone_funcionario.clear();
+		tx_cep_funcionario.clear();
+		tx_especialidade_funcionario.clear();
 		tx_nome_funcionario.clear();
 		tx_nome_funcionario.requestFocus();
 		dp_admss_funcionario.setValue(null);
@@ -103,8 +107,19 @@ public class FuncionarioController extends Application{
 	}
 	
 	
-	
-	
+    public void linkfuncionario(ActionEvent event) throws Exception {
+		try {
+			FXMLLoader fxmlLoader = new FXMLLoader(FuncionarioController.class.getResource("ViewFuncionario.fxml"));
+			Parent root1 = (Parent) fxmlLoader.load();
+			Stage stage = new Stage();
+			stage.setScene(new Scene(root1));
+			stage.show();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
 	
 	
 	
@@ -120,18 +135,18 @@ public class FuncionarioController extends Application{
 	public void execute() {
 		launch();
 	}
-	
+
 	@Override
 	public void start(Stage stage){
+		 
 		try {
-			AnchorPane pane = (AnchorPane) FXMLLoader.load(getClass().getResource("Principal.fxml"));
-			Scene sc = new Scene(pane);
-			stage.setScene(sc);
-			stage.show();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	            AnchorPane pane = (AnchorPane) FXMLLoader.load(getClass().getResource("ViewFuncionario.fxml"));
+	            Scene sc = new Scene(pane);
+	            stage.setScene(sc);
+	            stage.show();
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }   
 		
 	}
-
 }

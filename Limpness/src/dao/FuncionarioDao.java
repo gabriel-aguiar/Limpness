@@ -10,6 +10,8 @@ import java.util.List;
 
 import conexao.ConexaoDb;
 import entidade.Funcionario;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 
 
 public class FuncionarioDao extends ConexaoDb{
@@ -49,7 +51,7 @@ public class FuncionarioDao extends ConexaoDb{
 			
 			while(rs.next()) {
 				Funcionario funcionario = new Funcionario();
-				funcionario.setID_funcionario(rs.getInt("ID"));
+				funcionario.setID_funcionario(rs.getInt("ID_FUNCIONARIO"));
 				funcionario.setNome_func(rs.getString("NOME_FUNC"));
 				funcionario.setTel_func(rs.getInt("TEL_FUNC"));
 				funcionario.setEmail_func(rs.getString("EMAIL_FUNC"));
@@ -67,4 +69,6 @@ public class FuncionarioDao extends ConexaoDb{
 		
 		return listaFuncionario;
 	}
+	
+	
 }

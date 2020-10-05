@@ -1,160 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="437.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FuncionarioController">
+<AnchorPane prefHeight="437.0" prefWidth="731.0" style="-fx-background-color: #cdc9e4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PrincipalController">
    <children>
-      <TabPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="776.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
-         <tabs>
-            <Tab text="HOME">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <ImageView cache="true" fitHeight="161.0" fitWidth="346.0" layoutX="25.0" layoutY="53.0" opacity="0.91" pickOnBounds="true" preserveRatio="true" rotate="-8.3">
-                           <image>
-                              <Image url="@../../../../Pictures/LIMPNESS.jpg" />
-                           </image>
-                           <effect>
-                              <Reflection fraction="0.77" topOpacity="0.24" />
-                           </effect>
-                        </ImageView>
-                        <Text fill="#2006b5" fontSmoothingType="LCD" layoutX="497.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HISTORIA DA EMPRESA" wrappingWidth="197.7669219970703" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-            <Tab text="CLIENTES">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Button fx:id="btn_adicionar_cliente" layoutX="59.0" layoutY="272.0" mnemonicParsing="false" text="ADICIONAR" />
-                        <Button fx:id="btn_pesquisar_cliente" layoutX="368.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: #2006b5;" text="PESQUISAR" textFill="#fffefe" />
-                        <Button fx:id="btn_excluir_cliente" layoutX="466.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: #2006b5;" text="EXCLUIR" textFill="WHITE" />
-                        <Button fx:id="btn_alterar_cliente" layoutX="546.0" layoutY="31.0" mnemonicParsing="false" text="ALTERAR" />
-                        <TextArea layoutX="359.0" layoutY="75.0" opacity="0.46" prefHeight="242.0" prefWidth="260.0" />
-                        <TextField fx:id="tx_id_cliente" layoutX="59.0" layoutY="26.0" promptText="ID" />
-                        <TextField fx:id="tx_nome_cliente" layoutX="59.0" layoutY="58.0" promptText="NOME" />
-                        <TextField fx:id="tx_email_cliente" layoutX="59.0" layoutY="96.0" promptText="E-MAIL" />
-                        <TextField fx:id="tx_telefone_cliente" layoutX="59.0" layoutY="132.0" promptText="TELEFONE" />
-                        <TextField fx:id="tx_cpf_cliente" layoutX="59.0" layoutY="169.0" promptText="CPF" />
-                        <TextField fx:id="tx_cep_cliente" layoutX="59.0" layoutY="204.0" promptText="CEP" />
-                        <Button fx:id="btn_sair_cliente" layoutX="667.0" layoutY="284.0" mnemonicParsing="false" text="SAIR" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-            <Tab text="ORÇAMENTO">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Button fx:id="btn_adicionar_orcamento" layoutX="59.0" layoutY="272.0" mnemonicParsing="false" text="ADICIONAR" />
-                        <Button fx:id="btn_pesquisar_orcamento" layoutX="368.0" layoutY="31.0" mnemonicParsing="false" text="PESQUISAR" />
-                        <Button fx:id="btn_excluir_orcamento" layoutX="466.0" layoutY="31.0" mnemonicParsing="false" text="EXCLUIR" />
-                        <Button fx:id="btn_alterar_orcamento" layoutX="546.0" layoutY="31.0" mnemonicParsing="false" text="ALTERAR" />
-                        <TextArea layoutX="359.0" layoutY="75.0" prefHeight="242.0" prefWidth="260.0" />
-                        <TextField fx:id="tx_id_orcamento" layoutX="59.0" layoutY="24.0" promptText="ID" />
-                        <TextField fx:id="tx_tipo_local_orcamento" layoutX="59.0" layoutY="57.0" promptText="TIPO DE LOCAL" />
-                        <TextField fx:id="tx_tipo_limpeza_orcamento" layoutX="59.0" layoutY="91.0" promptText="TIPO DE LIMPEZA" />
-                        <TextField fx:id="tx_qnt_funcionario_orcamento" layoutX="59.0" layoutY="128.0" prefHeight="26.0" prefWidth="213.0" promptText="QUANTIDADE DE FUNCIONARIOS" />
-                        <TextField fx:id="tx_cep_orcamento" layoutX="59.0" layoutY="164.0" promptText="CEP" />
-                        <Button fx:id="btn_sair_orcamento" layoutX="667.0" layoutY="284.0" mnemonicParsing="false" text="SAIR" />
-                        <TextField fx:id="tx_id_cliente_orcamento" layoutX="59.0" layoutY="201.0" promptText="ID DO CLIENTE" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-            <Tab text="DESPESAS">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Button fx:id="btn_adicionar_despesas" layoutX="59.0" layoutY="272.0" mnemonicParsing="false" text="ADICIONAR" />
-                        <Button fx:id="btn_pesquisar_despesas" layoutX="368.0" layoutY="31.0" mnemonicParsing="false" text="PESQUISAR" />
-                        <Button fx:id="btn_excluir_despesas" layoutX="466.0" layoutY="31.0" mnemonicParsing="false" text="EXCLUIR" />
-                        <Button fx:id="btn_alterar_despesas" layoutX="546.0" layoutY="31.0" mnemonicParsing="false" text="ALTERAR" />
-                        <TextArea layoutX="359.0" layoutY="75.0" prefHeight="242.0" prefWidth="260.0" />
-                        <TextField fx:id="tx_id_despesas" layoutX="59.0" layoutY="26.0" promptText="ID" />
-                        <TextField fx:id="tx_valor_despesas" layoutX="59.0" layoutY="58.0" promptText="VALOR" />
-                        <TextField fx:id="tx_tipo_despesa_despesas" layoutX="59.0" layoutY="96.0" promptText="TIPO DA DESPESA" />
-                        <TextField fx:id="tx_data_despesas" layoutX="59.0" layoutY="132.0" promptText="DATA" />
-                        <Button fx:id="btn_sair_despesas" layoutX="667.0" layoutY="284.0" mnemonicParsing="false" text="SAIR" />
-                        <TextArea fx:id="ta_descricao_despesa" layoutX="59.0" layoutY="172.0" prefHeight="75.0" prefWidth="200.0" promptText="DESCRIÇÃO DA DESPESA" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-            <Tab text="FUNCIONARIO">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Button fx:id="btn_adicionar_funcionario" layoutX="86.0" layoutY="309.0" mnemonicParsing="false" onAction="#inserirProfessor" text="ADICIONAR" />
-                        <Button fx:id="btn_pesquisar_funcionario" layoutX="368.0" layoutY="31.0" mnemonicParsing="false" text="PESQUISAR" />
-                        <Button fx:id="btn_excluir_funcionario" layoutX="466.0" layoutY="31.0" mnemonicParsing="false" text="EXCLUIR" />
-                        <Button fx:id="btn_alterar_funcionario" layoutX="546.0" layoutY="31.0" mnemonicParsing="false" text="ALTERAR" />
-                        <TextArea fx:id="ta_mostra_funcionario" layoutX="359.0" layoutY="75.0" opacity="0.46" prefHeight="242.0" prefWidth="260.0" />
-                        <TextField fx:id="tx_nome_funcionario" layoutX="59.0" layoutY="31.0" promptText="NOME" />
-                        <TextField fx:id="tx_email_funcionario" layoutX="59.0" layoutY="93.0" promptText="E-MAIL" />
-                        <TextField fx:id="tx_telefone_funcionario" layoutX="59.0" layoutY="62.0" promptText="TELEFONE" />
-                        <TextField fx:id="tx_cep_funcionario" layoutX="59.0" layoutY="125.0" promptText="CEP" />
-                        <TextField fx:id="tx_especialidade_funcionario" layoutX="60.0" layoutY="158.0" promptText="ESPECIALIDADE" />
-                        <Button fx:id="btn_sair_funcionario" layoutX="667.0" layoutY="284.0" mnemonicParsing="false" text="SAIR" />
-                        <TextField fx:id="tx_salario_funcionario" layoutX="60.0" layoutY="259.0" promptText="SALARIO" />
-                        <DatePicker fx:id="dp_demss_funcionario" layoutX="60.0" layoutY="226.0" prefHeight="25.0" prefWidth="149.0" promptText="Data demissão" />
-                        <DatePicker fx:id="dp_admss_funcionario" layoutX="60.0" layoutY="192.0" prefHeight="25.0" prefWidth="149.0" promptText="Data admissão" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-            <Tab text="CLIENTES JURIDICOS">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Button fx:id="btn_adicionar_cliente_j" layoutX="59.0" layoutY="272.0" mnemonicParsing="false" text="ADICIONAR" />
-                        <Button fx:id="btn_pesquisar_cliente_j" layoutX="368.0" layoutY="31.0" mnemonicParsing="false" text="PESQUISAR" />
-                        <Button fx:id="btn_excluir_cliente_j" layoutX="466.0" layoutY="31.0" mnemonicParsing="false" text="EXCLUIR" />
-                        <Button fx:id="btn_alterar_cliente_j" layoutX="546.0" layoutY="31.0" mnemonicParsing="false" text="ALTERAR" />
-                        <TextArea layoutX="359.0" layoutY="75.0" opacity="0.46" prefHeight="242.0" prefWidth="260.0" />
-                        <TextField fx:id="tx_id_cliente_j" layoutX="59.0" layoutY="14.0" promptText="ID" />
-                        <TextField fx:id="tx_nome_cliente_j" layoutX="59.0" layoutY="46.0" promptText="NOME" />
-                        <TextField fx:id="tx_email_cliente_j" layoutX="59.0" layoutY="84.0" promptText="E-MAIL" />
-                        <TextField fx:id="tx_telefone_cliente_j" layoutX="59.0" layoutY="120.0" promptText="TELEFONE" />
-                        <TextField fx:id="tx_cnpj_cliente_j" layoutX="59.0" layoutY="157.0" promptText="CNPJ" />
-                        <TextField fx:id="tx_cep_cliente_j" layoutX="59.0" layoutY="192.0" promptText="CEP" />
-                        <Button fx:id="btn_sair_cliente_j" layoutX="667.0" layoutY="284.0" mnemonicParsing="false" text="SAIR" />
-                        <TextField fx:id="tx_categoria_cliente_j" layoutX="59.0" layoutY="227.0" promptText="CATEGORIA" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-            <Tab text="EQUIPAMENTO">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Button fx:id="btn_adicionar_equipamento" layoutX="59.0" layoutY="272.0" mnemonicParsing="false" text="ADICIONAR" />
-                        <Button fx:id="btn_pesquisar_equipamento" layoutX="368.0" layoutY="31.0" mnemonicParsing="false" text="PESQUISAR" />
-                        <Button fx:id="btn_excluir_equipamento" layoutX="466.0" layoutY="31.0" mnemonicParsing="false" text="EXCLUIR" />
-                        <Button fx:id="btn_alterar_equipamento" layoutX="546.0" layoutY="31.0" mnemonicParsing="false" text="ALTERAR" />
-                        <TextArea layoutX="359.0" layoutY="75.0" opacity="0.46" prefHeight="242.0" prefWidth="260.0" />
-                        <TextField fx:id="tx_id_equipamento" layoutX="59.0" layoutY="47.0" promptText="ID" />
-                        <TextField fx:id="tx_nome_equipamento" layoutX="59.0" layoutY="79.0" promptText="NOME" />
-                        <TextField fx:id="tx_qnt_equipamento_equipamento" layoutX="59.0" layoutY="117.0" prefHeight="26.0" prefWidth="216.0" promptText="QUANTIDADE DE EQUIPAMENTOS" />
-                        <TextField fx:id="tx_tipo_equipamento_equipamento" layoutX="59.0" layoutY="153.0" prefWidth="160.0" promptText="TIPO DE EQUIPAMENTO" />
-                        <TextField fx:id="tx_id_funcionario_equipamento" layoutX="59.0" layoutY="190.0" promptText="ID DO FUNCIONARIO" />
-                        <Button fx:id="btn_sair_equipamento" layoutX="667.0" layoutY="284.0" mnemonicParsing="false" text="SAIR" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-         </tabs>
-      </TabPane>
+      <Text fill="#2006b5" fontSmoothingType="LCD" layoutX="441.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HISTORIA DA EMPRESA" wrappingWidth="230.7669219970703">
+         <font>
+            <Font name="Yu Gothic UI Semibold" size="21.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="211.0" fitWidth="319.0" layoutX="22.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true" rotate="-10.8">
+         <image>
+            <Image url="@../../../../../Pictures/LIMPNESS.jpg" />
+         </image>
+      </ImageView>
+      <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="69.0" style="-fx-background-color: white;" text="HOME" textFill="#2006b5" />
+      <Button layoutX="69.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="96.0" style="-fx-background-color: white;" text="CLIENTES" textFill="#2006b5" />
+      <Button layoutX="164.0" mnemonicParsing="false" onAction="#linkclientej" prefHeight="42.0" prefWidth="128.0" style="-fx-background-color: white;" text="CLIENTES JURIDICOS" textFill="#2006b5" />
+      <Button layoutX="292.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: white;" text="ORÇAMENTO" textFill="#2006b5" />
+      <Button layoutX="406.0" mnemonicParsing="false" onAction="#linkfuncionario" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: white;" text="FUNCIONARIO" textFill="#2006b5" />
+      <Button layoutX="520.0" mnemonicParsing="false" onAction="#linkequipamento" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: white;" text="EQUIPAMENTO" textFill="#2006b5" />
+      <Button layoutX="634.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="96.0" style="-fx-background-color: white;" text="DESPESAS" textFill="#2006b5" />
+      <Text fill="#2006b5" layoutX="373.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A LIMPNESS É UMA STARTUP CRIADA EM CURITIBA COM ÍNICIO DE OPERAÇÃO EM 2020, USAMOS A TECNOLOGIA PARA FACILITAR A VIDA DE PESSOAS QUE QUEREM UM SERVIÇO DE QUALIDADE EM APENAS ALGUNS CLICKS, ASSIM A LIMPEZA SERÁ RESOLVIDA ATRAVÉS DA NOSSA PLATAFORMA." textAlignment="JUSTIFY" wrappingWidth="348.13671875">
+         <font>
+            <Font name="Yu Gothic UI Semilight" size="18.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
