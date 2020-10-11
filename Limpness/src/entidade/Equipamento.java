@@ -111,8 +111,8 @@ public class Equipamento {
 
 	@Override
 	public String toString() {
-		return "Equipamento [ID_equipamento=" + ID_equipamento + ", nome=" + nome + ", qnt_equip=" + qnt_equip
-				+ ", tipo_equip=" + tipo_equip + ", ID_funcionario=" + ID_funcionario + "]";
+		return "Equipamento ID_equipamento=" + ID_equipamento + ", nome=" + nome + ", qnt_equip=" + qnt_equip
+				+ ", tipo_equip=" + tipo_equip + ", ID_funcionario=" + ID_funcionario;
 	}
 	
 	

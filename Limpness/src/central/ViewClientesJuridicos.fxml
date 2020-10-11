@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="451.0" prefWidth="771.0" style="-fx-background-color: #cdc9e4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="451.0" prefWidth="771.0" style="-fx-background-color: #cdc9e4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Cliente_JuridicoController">
    <children>
       <Button fx:id="btn_adicionar_cliente_j" layoutX="91.0" layoutY="361.0" mnemonicParsing="false" onAction="#inserirClientej" style="-fx-background-color: #2006b5;" text="ADICIONAR" textFill="#fffbfb" />
       <Button fx:id="btn_pesquisar_cliente_j" layoutX="347.0" layoutY="113.0" mnemonicParsing="false" style="-fx-background-color: #2006b5;" text="PESQUISAR" textFill="WHITE" />

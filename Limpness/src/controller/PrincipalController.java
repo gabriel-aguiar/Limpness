@@ -10,7 +10,7 @@ public class PrincipalController {
 
 	public void linkfuncionario(ActionEvent event) throws Exception {
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(FuncionarioController.class.getResource("ViewFuncionario.fxml"));
+			FXMLLoader fxmlLoader = new FXMLLoader(FuncionarioController.class.getResource("..//central//ViewFuncionario.fxml"));
 			Parent root1 = fxmlLoader.load();
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root1));
@@ -24,7 +24,7 @@ public class PrincipalController {
 	
 	public void linkequipamento(ActionEvent event) throws Exception {
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(EquipamentoController.class.getResource("ViewEquipamento.fxml"));
+			FXMLLoader fxmlLoader = new FXMLLoader(EquipamentoController.class.getResource("..//central//ViewEquipamento.fxml"));
 			Parent root1 = fxmlLoader.load();
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root1));
@@ -38,7 +38,7 @@ public class PrincipalController {
 	
 	public void linkclientej(ActionEvent event) throws Exception {
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(Cliente_JuridicoController.class.getResource("ViewClientesJuridicos.fxml"));
+			FXMLLoader fxmlLoader = new FXMLLoader(Cliente_JuridicoController.class.getResource("..//central//ViewClientesJuridicos.fxml"));
 			Parent root1 = fxmlLoader.load();
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root1));
@@ -50,4 +50,33 @@ public class PrincipalController {
 
 	}
 	
+	
+	public void linkdespesa(ActionEvent event) throws Exception {
+		try {
+			FXMLLoader fxmlLoader = new FXMLLoader(DespesaController.class.getResource("..//central//ViewDespesas.fxml"));
+			Parent root1 = fxmlLoader.load();
+			Stage stage = new Stage();
+			stage.setScene(new Scene(root1));
+			stage.show();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+	
+	
+	public void linkclientef(ActionEvent event) throws Exception {
+		try {
+			FXMLLoader fxmlLoader = new FXMLLoader(DespesaController.class.getResource("..//central//ViewClientes.fxml"));
+			Parent root1 = fxmlLoader.load();
+			Stage stage = new Stage();
+			stage.setScene(new Scene(root1));
+			stage.show();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
 }

@@ -170,9 +170,9 @@ public class Cliente_Juridico {
 
 	@Override
 	public String toString() {
-		return "Cliente_Juridico [ID_cli_juridico=" + ID_cli_juridico + ", nome_cli_j=" + nome_cli_j + ", tel_cli_j="
+		return "Cliente_Juridico ID_cli_juridico=" + ID_cli_juridico + ", nome_cli_j=" + nome_cli_j + ", tel_cli_j="
 				+ tel_cli_j + ", email_cli_j=" + email_cli_j + ", cep_cli_j=" + cep_cli_j + ", cnpj_cli_j=" + cnpj_cli_j
-				+ ", categoria_cli_j=" + categoria_cli_j + "]";
+				+ ", categoria_cli_j=" + categoria_cli_j;
 	}
 	
 	

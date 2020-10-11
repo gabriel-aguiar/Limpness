@@ -44,6 +44,7 @@ public class EquipamentoDao extends ConexaoDb{
 				
 				while(rs.next()) {
 					Equipamento equipamento = new Equipamento();
+					equipamento.setID_equipamento(rs.getInt("ID_EQUIPAMENTO"));
 					equipamento.setNome(rs.getString("NOME"));
 					equipamento.setQnt_equip(rs.getInt("QNT_EQUIP"));
 					equipamento.setTipo_equip(rs.getString("TIPO_EQUIP"));

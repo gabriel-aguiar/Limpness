@@ -20,12 +20,12 @@
          </image>
       </ImageView>
       <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="69.0" style="-fx-background-color: white;" text="HOME" textFill="#2006b5" />
-      <Button layoutX="69.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="96.0" style="-fx-background-color: white;" text="CLIENTES" textFill="#2006b5" />
+      <Button layoutX="69.0" mnemonicParsing="false" onAction="#linkclientef" prefHeight="42.0" prefWidth="96.0" style="-fx-background-color: white;" text="CLIENTES" textFill="#2006b5" />
       <Button layoutX="164.0" mnemonicParsing="false" onAction="#linkclientej" prefHeight="42.0" prefWidth="128.0" style="-fx-background-color: white;" text="CLIENTES JURIDICOS" textFill="#2006b5" />
       <Button layoutX="292.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: white;" text="ORÇAMENTO" textFill="#2006b5" />
       <Button layoutX="406.0" mnemonicParsing="false" onAction="#linkfuncionario" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: white;" text="FUNCIONARIO" textFill="#2006b5" />
       <Button layoutX="520.0" mnemonicParsing="false" onAction="#linkequipamento" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: white;" text="EQUIPAMENTO" textFill="#2006b5" />
-      <Button layoutX="634.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="96.0" style="-fx-background-color: white;" text="DESPESAS" textFill="#2006b5" />
+      <Button layoutX="634.0" mnemonicParsing="false" onAction="#linkdespesa" prefHeight="42.0" prefWidth="96.0" style="-fx-background-color: white;" text="DESPESAS" textFill="#2006b5" />
       <Text fill="#2006b5" layoutX="373.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A LIMPNESS É UMA STARTUP CRIADA EM CURITIBA COM ÍNICIO DE OPERAÇÃO EM 2020, USAMOS A TECNOLOGIA PARA FACILITAR A VIDA DE PESSOAS QUE QUEREM UM SERVIÇO DE QUALIDADE EM APENAS ALGUNS CLICKS, ASSIM A LIMPEZA SERÁ RESOLVIDA ATRAVÉS DA NOSSA PLATAFORMA." textAlignment="JUSTIFY" wrappingWidth="348.13671875">
          <font>
             <Font name="Yu Gothic UI Semilight" size="18.0" />
