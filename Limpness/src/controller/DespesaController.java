@@ -74,10 +74,10 @@ public class DespesaController extends Application{
 	
     
     private void listaDespesa() {
-    	ta_descricao_despesa.clear();
+    	ta_mostra_despesas.clear();
 		List<Despesa> listaDespesa = new DespesasDao().listAll();
 		listaDespesa.forEach(despesa -> {
-			ta_descricao_despesa.appendText(despesa.toString() + "\n");
+			ta_mostra_despesas.appendText(despesa.toString() + "\n");
 		});
 	}
 	
