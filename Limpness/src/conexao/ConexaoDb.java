@@ -8,7 +8,7 @@ public class ConexaoDb {
 	
 	private String usuario = "SA";
 	private String senha = "";
-	private String PathBase = "C:\\Users\\GABRIEL\\eclipse-workspace\\Limpness\\Dados\\dados";
+	private String PathBase = "C:\\Users\\paulo\\Paulo\\Limpness\\BancoTestePaulo\\teste";
 	private String URL = "jdbc:hsqldb:file:" + PathBase + ";";
 	
 	public Connection conectar() {
