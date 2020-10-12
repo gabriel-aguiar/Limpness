@@ -51,6 +51,21 @@ public class PrincipalController {
 	}
 	
 	
+	public void linkorcamento(ActionEvent event) throws Exception {
+		try {
+			FXMLLoader fxmlLoader = new FXMLLoader(OrcamentoController.class.getResource("..//central//ViewOrcamento.fxml"));
+			Parent root1 = fxmlLoader.load();
+			Stage stage = new Stage();
+			stage.setScene(new Scene(root1));
+			stage.show();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+	
+	
 	public void linkdespesa(ActionEvent event) throws Exception {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader(DespesaController.class.getResource("..//central//ViewDespesas.fxml"));
