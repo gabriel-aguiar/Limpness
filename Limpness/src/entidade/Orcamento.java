@@ -7,21 +7,14 @@ public class Orcamento {
  private int qnt_funcionario;
  private String cep;
  private int ID_cli_fisico;
+ private int ID_cli_juridico;
  
  public Orcamento() {
 	 
  }
- 
-public Orcamento(String tipo_local, String tipo_limpeza, int qnt_funcionario, String cep, int iD_cli_fisico) {
-	super();
-	this.tipo_local = tipo_local;
-	this.tipo_limpeza = tipo_limpeza;
-	this.qnt_funcionario = qnt_funcionario;
-	this.cep = cep;
-	ID_cli_fisico = iD_cli_fisico;
-}
+
 public Orcamento(int iD_orcamento, String tipo_local, String tipo_limpeza, int qnt_funcionario, String cep,
-		int iD_cli_fisico) {
+		int iD_cli_fisico, int iD_cli_juridico) {
 	super();
 	ID_orcamento = iD_orcamento;
 	this.tipo_local = tipo_local;
@@ -29,52 +22,82 @@ public Orcamento(int iD_orcamento, String tipo_local, String tipo_limpeza, int q
 	this.qnt_funcionario = qnt_funcionario;
 	this.cep = cep;
 	ID_cli_fisico = iD_cli_fisico;
+	ID_cli_juridico = iD_cli_juridico;
+}
+
+public Orcamento(String tipo_local, String tipo_limpeza, int qnt_funcionario, String cep, int iD_cli_fisico,
+		int iD_cli_juridico) {
+	super();
+	this.tipo_local = tipo_local;
+	this.tipo_limpeza = tipo_limpeza;
+	this.qnt_funcionario = qnt_funcionario;
+	this.cep = cep;
+	ID_cli_fisico = iD_cli_fisico;
+	ID_cli_juridico = iD_cli_juridico;
 }
 
 public int getID_orcamento() {
 	return ID_orcamento;
 }
+
 public void setID_orcamento(int iD_orcamento) {
 	ID_orcamento = iD_orcamento;
 }
+
 public String getTipo_local() {
 	return tipo_local;
 }
+
 public void setTipo_local(String tipo_local) {
 	this.tipo_local = tipo_local;
 }
+
 public String getTipo_limpeza() {
 	return tipo_limpeza;
 }
+
 public void setTipo_limpeza(String tipo_limpeza) {
 	this.tipo_limpeza = tipo_limpeza;
 }
+
 public int getQnt_funcionario() {
 	return qnt_funcionario;
 }
+
 public void setQnt_funcionario(int qnt_funcionario) {
 	this.qnt_funcionario = qnt_funcionario;
 }
+
 public String getCep() {
 	return cep;
 }
+
 public void setCep(String cep) {
 	this.cep = cep;
 }
+
 public int getID_cli_fisico() {
 	return ID_cli_fisico;
 }
+
 public void setID_cli_fisico(int iD_cli_fisico) {
 	ID_cli_fisico = iD_cli_fisico;
 }
 
+public int getID_cli_juridico() {
+	return ID_cli_juridico;
+}
 
+public void setID_cli_juridico(int iD_cli_juridico) {
+	ID_cli_juridico = iD_cli_juridico;
+}
 
 @Override
 public int hashCode() {
 	final int prime = 31;
 	int result = 1;
 	result = prime * result + ID_cli_fisico;
+	result = prime * result + ID_cli_juridico;
 	result = prime * result + ID_orcamento;
 	result = prime * result + ((cep == null) ? 0 : cep.hashCode());
 	result = prime * result + qnt_funcionario;
@@ -82,6 +105,7 @@ public int hashCode() {
 	result = prime * result + ((tipo_local == null) ? 0 : tipo_local.hashCode());
 	return result;
 }
+
 @Override
 public boolean equals(Object obj) {
 	if (this == obj)
@@ -92,6 +116,8 @@ public boolean equals(Object obj) {
 		return false;
 	Orcamento other = (Orcamento) obj;
 	if (ID_cli_fisico != other.ID_cli_fisico)
+		return false;
+	if (ID_cli_juridico != other.ID_cli_juridico)
 		return false;
 	if (ID_orcamento != other.ID_orcamento)
 		return false;
@@ -114,12 +140,13 @@ public boolean equals(Object obj) {
 		return false;
 	return true;
 }
+
 @Override
 public String toString() {
-	return "Orcamento [ID_orcamento=" + ID_orcamento + ", tipo_local=" + tipo_local + ", tipo_limpeza=" + tipo_limpeza
-			+ ", qnt_funcionario=" + qnt_funcionario + ", cep=" + cep + ", ID_cli_fisico=" + ID_cli_fisico + "]";
+	return "Orcamento ID_orcamento=" + ID_orcamento + ", tipo_local=" + tipo_local + ", tipo_limpeza=" + tipo_limpeza
+			+ ", qnt_funcionario=" + qnt_funcionario + ", cep=" + cep + ", ID_cli_fisico=" + ID_cli_fisico
+			+ ", ID_cli_juridico=" + ID_cli_juridico;
 }
- 
  
  
 }

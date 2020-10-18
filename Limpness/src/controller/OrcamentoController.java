@@ -61,6 +61,9 @@ public class OrcamentoController extends Application implements Initializable {
 
     @FXML
     private TextField tx_busca_id_orcamento;
+    
+    @FXML
+    private TextField tx_id_cliente_juridico;
 
     @FXML
     private Label label_label;
@@ -86,6 +89,7 @@ public class OrcamentoController extends Application implements Initializable {
 				tx_qnt_funcionario_orcamento.setText(orcamento.getQnt_funcionario() + "");
 				tx_cep_orcamento.setText(orcamento.getCep());
 				tx_id_cliente_orcamento.setText(orcamento.getID_cli_fisico()+ "");
+				tx_id_cliente_juridico.setText(orcamento.getID_cli_juridico()+ "");
 
 			}
 
@@ -112,7 +116,8 @@ public class OrcamentoController extends Application implements Initializable {
 		tx_tipo_limpeza_orcamento.clear();
 		tx_qnt_funcionario_orcamento.clear();
 		tx_cep_orcamento.clear();
-		
+		tx_id_cliente_orcamento.clear();
+		tx_id_cliente_juridico.clear();
 	}
 	
     
@@ -149,12 +154,12 @@ public class OrcamentoController extends Application implements Initializable {
     	}
     
     private Orcamento pegaDados() {
-		return new Orcamento(tx_tipo_local_orcamento.getText(),tx_tipo_limpeza_orcamento.getText(),Integer.valueOf(tx_qnt_funcionario_orcamento.getText()),tx_cep_orcamento.getText(),Integer.valueOf(tx_id_cliente_orcamento.getText()));
+		return new Orcamento(tx_tipo_local_orcamento.getText(),tx_tipo_limpeza_orcamento.getText(), Integer.valueOf(tx_qnt_funcionario_orcamento.getText()), tx_cep_orcamento.getText(), Integer.valueOf(tx_id_cliente_orcamento.getText()), Integer.valueOf(tx_id_cliente_juridico.getText()));
 	}
 	
 	
     private Orcamento pegaDadosID() {
-		return new Orcamento (Integer.valueOf(label_label.getText()),tx_tipo_local_orcamento.getText(),tx_tipo_limpeza_orcamento.getText(),Integer.valueOf(tx_qnt_funcionario_orcamento.getText()),tx_cep_orcamento.getText(),Integer.valueOf(tx_id_cliente_orcamento.getText()));
+		return new Orcamento (Integer.valueOf(label_label.getText()),tx_tipo_local_orcamento.getText(),tx_tipo_limpeza_orcamento.getText(),Integer.valueOf(tx_qnt_funcionario_orcamento.getText()),tx_cep_orcamento.getText(),Integer.valueOf(tx_id_cliente_orcamento.getText()), Integer.valueOf(tx_id_cliente_juridico.getText()));
 
 	}
 	
