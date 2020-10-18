@@ -1,29 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="394.0" prefWidth="713.0" style="-fx-background-color: #cdc9e4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Cliente_FisicoController">
+<AnchorPane prefHeight="394.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Cliente_FisicoController">
    <children>
-      <Button fx:id="btn_adicionar_cliente" layoutX="113.0" layoutY="296.0" mnemonicParsing="false" onAction="#inserirClientef" style="-fx-background-color: #2006b5;" text="ADICIONAR" textFill="WHITE" />
-      <Button fx:id="btn_pesquisar_cliente" layoutX="359.0" layoutY="75.0" mnemonicParsing="false" style="-fx-background-color: #2006b5;" text="PESQUISAR" textFill="#fffefe" />
-      <Button fx:id="btn_excluir_cliente" layoutX="457.0" layoutY="75.0" mnemonicParsing="false" style="-fx-background-color: #2006b5;" text="EXCLUIR" textFill="WHITE" />
-      <Button fx:id="btn_alterar_cliente" layoutX="537.0" layoutY="75.0" mnemonicParsing="false" style="-fx-background-color: #2006b5;" text="ALTERAR" textFill="WHITE" />
+      <Button fx:id="btn_adicionar_cliente" layoutX="78.0" layoutY="287.0" mnemonicParsing="false" onAction="#inserirClientef" text="ADICIONAR" />
+      <Button fx:id="btn_pesquisar_cliente" layoutX="533.0" layoutY="75.0" mnemonicParsing="false" onAction="#buscarCliente" style="-fx-background-color: #2006b5;" text="PESQUISAR" textFill="#fffefe" />
+      <Button fx:id="btn_excluir_cliente" layoutX="235.0" layoutY="287.0" mnemonicParsing="false" onAction="#deletaPessoa" style="-fx-background-color: #2006b5;" text="EXCLUIR" textFill="WHITE" />
+      <Button fx:id="btn_alterar_cliente" layoutX="163.0" layoutY="287.0" mnemonicParsing="false" onAction="#alterarCliente" text="ALTERAR" />
       <TextArea fx:id="ta_mostra_cf" layoutX="350.0" layoutY="119.0" opacity="0.46" prefHeight="242.0" prefWidth="260.0" />
       <TextField fx:id="tx_nome_cliente" layoutX="78.0" layoutY="100.0" promptText="NOME" />
       <TextField fx:id="tx_email_cliente" layoutX="78.0" layoutY="138.0" promptText="E-MAIL" />
       <TextField fx:id="tx_telefone_cliente" layoutX="78.0" layoutY="174.0" promptText="TELEFONE" />
       <TextField fx:id="tx_cpf_cliente" layoutX="78.0" layoutY="211.0" promptText="CPF" />
       <TextField fx:id="tx_cep_cliente" layoutX="78.0" layoutY="246.0" promptText="CEP" />
-      <Button fx:id="btn_sair_cliente" layoutX="658.0" layoutY="341.0" mnemonicParsing="false" style="-fx-background-color: red;" text="SAIR" textFill="WHITE" />
-      <Text fill="#2006b5" layoutX="57.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLIENTES" textAlignment="CENTER" underline="true" wrappingWidth="270.00000675581396">
-         <font>
-            <Font name="Yu Gothic UI Semibold" size="28.0" />
-         </font>
-      </Text>
+      <Button fx:id="btn_sair_cliente" layoutX="658.0" layoutY="341.0" mnemonicParsing="false" text="SAIR" />
+      <TextField fx:id="textFildID" layoutX="350.0" layoutY="75.0" prefHeight="25.0" prefWidth="64.0" />
+      <Label fx:id="labelLabelID" layoutX="78.0" layoutY="48.0" text="ID" visible="false" />
+      <Label fx:id="labelID" layoutX="127.0" layoutY="48.0" visible="false" />
    </children>
 </AnchorPane>

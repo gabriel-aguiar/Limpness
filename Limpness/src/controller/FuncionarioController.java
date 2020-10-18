@@ -6,6 +6,7 @@ import java.sql.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import javax.swing.JOptionPane;
 import dao.FuncionarioDao;
 import entidade.Funcionario;
 import javafx.application.Application;
@@ -17,12 +18,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class FuncionarioController extends Application{
+public class FuncionarioController extends Application implements Initializable{
 	
 	@FXML
     private Button btn_adicionar_funcionario;
@@ -72,9 +74,18 @@ public class FuncionarioController extends Application{
     @FXML
     private DatePicker dp_admss_funcionario;
     
+    @FXML 
+    private TextField textFildID;
+    
+    @FXML
+    private Label labelLabelID;
+
+    @FXML
+    private Label labelID;
+    
 	
 	@FXML
-    void inserirProfessor(ActionEvent event) {
+    void inserirFuncionario(ActionEvent event) {
 	
 		Funcionario funcionario = pegaDados();
     	limpaCampos();
@@ -109,7 +120,77 @@ public class FuncionarioController extends Application{
 		return new Funcionario(tx_nome_funcionario.getText(), Integer.valueOf(tx_telefone_funcionario.getText()), tx_email_funcionario.getText(), tx_cep_funcionario.getText(), tx_especialidade_funcionario.getText(), Date.valueOf(dp_admss_funcionario.getValue()), Date.valueOf(dp_demss_funcionario.getValue()), Double.valueOf(tx_salario_funcionario.getText()));
 	}
 	
-	
+    private Funcionario pegaDadoId() {
+		return new Funcionario(Integer.valueOf(labelID.getText()) , tx_nome_funcionario.getText(), Integer.valueOf(tx_telefone_funcionario.getText()), tx_email_funcionario.getText(), tx_cep_funcionario.getText(), tx_especialidade_funcionario.getText(), Date.valueOf(dp_admss_funcionario.getValue()), Date.valueOf(dp_demss_funcionario.getValue()), Double.valueOf(tx_salario_funcionario.getText()));
+	}
+    
+    @FXML
+    void buscarFuncionario(ActionEvent event) {
+    	
+    	String idString = textFildID.getText();
+    	Funcionario funcionario = null;
+    	if(!idString.equals(""))
+    	{
+    		try
+    		{
+    			int id = Integer.valueOf(idString);
+    			funcionario = new FuncionarioDao().findByID(id);
+    		}
+    		catch (Exception e)
+    		{
+    			
+    		}
+    		if (funcionario != null)
+    		{
+    			labelLabelID.setVisible(true);
+    			labelID.setVisible(true);
+    			labelID.setText(funcionario.getID_funcionario()+"");
+    			tx_nome_funcionario.setText(funcionario.getNome_func());
+    			tx_telefone_funcionario.setText(funcionario.getTel_func() + "");
+    			tx_email_funcionario.setText(funcionario.getEmail_func());
+    			tx_cep_funcionario.setText(funcionario.getEndereco_func());
+    			tx_especialidade_funcionario.setText(funcionario.getEspecialidade_func());
+    			dp_admss_funcionario.setValue(funcionario.getData_admss_func().toLocalDate());
+    			dp_demss_funcionario.setValue(funcionario.getData_demss_func().toLocalDate());
+    			tx_salario_funcionario.setText(funcionario.getSalario_finc() + "");
+    			
+    		}
+    	}
+    	
+    	textFildID.clear();
+
+    }
+    
+    
+    @FXML
+    void alterarFuncionario(ActionEvent event) {
+    	
+    	Funcionario funcionario = pegaDadoId();
+    	limpaCampos();
+    	int qtde = new FuncionarioDao().alterar(funcionario);
+    	listaFuncionario();
+    	System.out.println(qtde);
+    	
+    }
+    
+    
+    @FXML
+    void deletaFuncionario(ActionEvent event) {
+    	
+    	 int opt = JOptionPane.showConfirmDialog(null, "Quem mesmo deletar esse registro?" , "Delete", JOptionPane.YES_NO_OPTION);
+   	  if(opt ==0 )
+   	  {
+   		Funcionario funcionario= pegaDadoId();
+   		  limpaCampos(); 	
+   	      int qtde = new FuncionarioDao().deleta(funcionario);
+   	      listaFuncionario();
+   	      System.out.println(qtde);
+   	      
+   	  }
+
+    }
+   
+
     public void linkfuncionario(ActionEvent event) throws Exception {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader(FuncionarioController.class.getResource("ViewFuncionario.fxml"));
@@ -122,18 +203,7 @@ public class FuncionarioController extends Application{
 			e.printStackTrace();
 		}
 
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}	
 	
 	public void execute() {
 		launch();
@@ -152,6 +222,11 @@ public class FuncionarioController extends Application{
 	        }   
 		
 	}
-
-
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		
+		listaFuncionario();
+		
+	}
 }
