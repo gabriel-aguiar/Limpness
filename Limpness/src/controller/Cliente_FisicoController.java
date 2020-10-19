@@ -2,7 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.util.List;
-
+import javax.swing.JOptionPane;
 import dao.Cliente_FisicoDao;
 import entidade.Cliente_Fisico;
 import javafx.application.Application;
@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -19,38 +20,47 @@ import javafx.stage.Stage;
 public class Cliente_FisicoController extends Application{
 
 	
-	   @FXML
-	    private Button btn_adicionar_cliente;
+	@FXML
+    private Button btn_adicionar_cliente;
 
-	    @FXML
-	    private Button btn_pesquisar_cliente;
+    @FXML
+    private Button btn_pesquisar_cliente;
 
-	    @FXML
-	    private Button btn_excluir_cliente;
+    @FXML
+    private Button btn_excluir_cliente;
 
-	    @FXML
-	    private Button btn_alterar_cliente;
+    @FXML
+    private Button btn_alterar_cliente;
 
-	    @FXML
-	    private TextField tx_nome_cliente;
+    @FXML
+    private TextArea ta_mostra_cf;
 
-	    @FXML
-	    private TextField tx_email_cliente;
+    @FXML
+    private TextField tx_nome_cliente;
 
-	    @FXML
-	    private TextField tx_telefone_cliente;
+    @FXML
+    private TextField tx_email_cliente;
 
-	    @FXML
-	    private TextField tx_cpf_cliente;
+    @FXML
+    private TextField tx_telefone_cliente;
 
-	    @FXML
-	    private TextField tx_cep_cliente;
+    @FXML
+    private TextField tx_cpf_cliente;
 
-	    @FXML
-	    private Button btn_sair_cliente;
-	    
-	    @FXML
-	    private TextArea ta_mostra_cf;
+    @FXML
+    private TextField tx_cep_cliente;
+
+    @FXML
+    private Button btn_sair_cliente;
+
+    @FXML
+    private TextField textFildID;
+
+    @FXML
+    private Label labelLabelID;
+
+    @FXML
+    private Label labelID;
 	
 	    
 	@FXML
@@ -86,17 +96,72 @@ public class Cliente_FisicoController extends Application{
 		return new Cliente_Fisico(tx_nome_cliente.getText(), Integer.valueOf(tx_telefone_cliente.getText()), Integer.valueOf(tx_cpf_cliente.getText()), tx_email_cliente.getText(), tx_cep_cliente.getText());
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+    @FXML
+    void buscarCliente(ActionEvent event) {
+    	
+    	String idString = textFildID.getText();
+    	Cliente_Fisico clientef = null;
+    	if(!idString.equals(""))
+    	{
+    		try
+    		{
+    			int id = Integer.valueOf(idString);
+    			clientef = new Cliente_FisicoDao().findByID(id);
+    		}
+    		catch (Exception e)
+    		{
+    			
+    		}
+    		if (clientef != null)
+    		{
+    			labelLabelID.setVisible(true);
+    			labelID.setVisible(true);
+    			labelID.setText(clientef.getID_cli_fisico()+"");
+    			tx_nome_cliente.setText(clientef.getNome_cli_f());
+    			tx_email_cliente.setText(clientef.getEmail_cli_f());
+    			tx_telefone_cliente.setText(clientef.getTel_cli_f()+"");
+    			tx_cpf_cliente.setText(clientef.getCpf_func()+"");
+    			tx_cep_cliente.setText(clientef.getCep_cli_f());
+    		}
+    	}
+    	
+    	textFildID.clear();
+
+    }
+    
+    
+    @FXML
+    void alterarCliente(ActionEvent event) {
+    	
+    	Cliente_Fisico cliente_fisico = pegaDadoID();
+    	limpaCampos();
+    	int qtde = new Cliente_FisicoDao().alterar(cliente_fisico);
+    	listaCliente_Fisico();
+    	System.out.println(qtde);
+    	
+    }
+    
+    private Cliente_Fisico pegaDadoID() {
+		return new Cliente_Fisico(Integer.valueOf(labelID.getText()), tx_nome_cliente.getText(), Integer.valueOf(tx_telefone_cliente.getText()), Integer.valueOf(tx_cpf_cliente.getText()), tx_email_cliente.getText(), tx_cep_cliente.getText());
+	}
+    
+    
+    
+    @FXML
+    void deletaPessoa(ActionEvent event) {
+    	
+    	 int opt = JOptionPane.showConfirmDialog(null, "Quem mesmo deletar esse registro?" , "Delete", JOptionPane.YES_NO_OPTION);
+   	  if(opt ==0 )
+   	  {
+   		Cliente_Fisico clientef = pegaDadoID();
+   		  limpaCampos(); 	
+   	      int qtde = new Cliente_FisicoDao().deleta(clientef);
+   	      listaCliente_Fisico();
+   	      System.out.println(qtde);
+   	      
+   	  }
+
+    }
 	
 	public void execute() {
 		launch();

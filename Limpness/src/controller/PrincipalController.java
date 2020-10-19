@@ -7,6 +7,21 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class PrincipalController {
+	
+	public void linkLogin(ActionEvent event) throws Exception {
+		try {
+			FXMLLoader fxmlLoader = new FXMLLoader(LoginController.class.getResource("..//central//ViewLogin.fxml"));
+			Parent root1 = fxmlLoader.load();
+			Stage stage = new Stage();
+			stage.setScene(new Scene(root1));
+			stage.show();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+	
 
 	public void linkfuncionario(ActionEvent event) throws Exception {
 		try {
@@ -83,7 +98,7 @@ public class PrincipalController {
 	
 	public void linkclientef(ActionEvent event) throws Exception {
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(DespesaController.class.getResource("..//central//ViewClientes.fxml"));
+			FXMLLoader fxmlLoader = new FXMLLoader(Cliente_FisicoController.class.getResource("..//central//ViewClientes.fxml"));
 			Parent root1 = fxmlLoader.load();
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root1));
