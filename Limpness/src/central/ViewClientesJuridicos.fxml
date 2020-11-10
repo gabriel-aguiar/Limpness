@@ -4,30 +4,59 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="451.0" prefWidth="719.0" style="-fx-background-color: #cdc9e4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Cliente_JuridicoController">
+<AnchorPane prefHeight="422.0" prefWidth="719.0" style="-fx-background-color: #cdc9e4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Cliente_JuridicoController">
    <children>
-      <Button fx:id="btn_adicionar_cliente_j" layoutX="17.0" layoutY="361.0" mnemonicParsing="false" onAction="#inserirClientej" style="-fx-background-color: #2006b5;" text="ADICIONAR" textFill="#fffbfb" />
-      <Button fx:id="btn_pesquisar_cliente_j" layoutX="340.0" layoutY="120.0" mnemonicParsing="false" onAction="#buscarCliente_Juridico" style="-fx-background-color: #2006b5;" text="PESQUISAR" textFill="WHITE" />
-      <Button fx:id="btn_excluir_cliente_j" layoutX="112.0" layoutY="361.0" mnemonicParsing="false" onAction="#excluiCliente_Juridico" style="-fx-background-color: #2006b5;" text="EXCLUIR" textFill="WHITE" />
-      <Button fx:id="btn_alterar_cliente_j" layoutX="184.0" layoutY="361.0" mnemonicParsing="false" onAction="#AlterarCliente_Juridico" style="-fx-background-color: #2006b5;" text="ALTERAR" textFill="WHITE" />
-      <TextArea fx:id="ta_mostra_cj" layoutX="340.0" layoutY="170.0" opacity="0.46" prefHeight="242.0" prefWidth="261.0" />
+      <Button fx:id="btn_adicionar_cliente_j" layoutX="16.0" layoutY="361.0" mnemonicParsing="false" onAction="#inserirClientej" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #0598ff;" text="ADICIONAR" textFill="#fffbfb">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn_pesquisar_cliente_j" layoutX="461.0" layoutY="119.0" mnemonicParsing="false" onAction="#buscarCliente_Juridico" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #0598ff;" text="PESQUISAR" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn_excluir_cliente_j" layoutX="200.0" layoutY="361.0" mnemonicParsing="false" onAction="#excluiCliente_Juridico" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #0598ff;" text="EXCLUIR" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn_alterar_cliente_j" layoutX="108.0" layoutY="361.0" mnemonicParsing="false" onAction="#AlterarCliente_Juridico" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #0598ff;" text="ALTERAR" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <TextArea fx:id="ta_mostra_cj" layoutX="299.0" layoutY="157.0" opacity="0.46" prefHeight="224.0" prefWidth="403.0" />
       <TextField fx:id="tx_nome_cliente_j" layoutX="56.0" layoutY="132.0" promptText="NOME" />
       <TextField fx:id="tx_email_cliente_j" layoutX="56.0" layoutY="170.0" promptText="E-MAIL" />
       <TextField fx:id="tx_telefone_cliente_j" layoutX="56.0" layoutY="206.0" promptText="TELEFONE" />
       <TextField fx:id="tx_cnpj_cliente_j" layoutX="56.0" layoutY="243.0" promptText="CNPJ" />
       <TextField fx:id="tx_cep_cliente_j" layoutX="56.0" layoutY="278.0" promptText="ENDEREÇO" />
-      <Button fx:id="btn_sair_cliente_j" layoutX="654.0" layoutY="383.0" mnemonicParsing="false" style="-fx-background-color: red;" text="SAIR" textFill="WHITE" />
+      <Button fx:id="btn_sair_cliente_j" layoutX="661.0" layoutY="389.0" mnemonicParsing="false" style="-fx-background-color: red;" text="SAIR" textFill="WHITE" />
       <TextField fx:id="tx_categoria_cliente_j" layoutX="56.0" layoutY="313.0" promptText="CATEGORIA" />
-      <Text fill="#2006b5" layoutX="131.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clientes Juridicos" underline="true">
+      <Text layoutX="117.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clientes Juridicos" underline="true">
          <font>
-            <Font name="Yu Gothic UI Semibold" size="30.0" />
+            <Font name="Algerian" size="30.0" />
          </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#4d6a9f" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
       </Text>
-      <Label fx:id="label_label" layoutX="56.0" layoutY="67.0" />
-      <TextField fx:id="tx_busca_id" layoutX="445.0" layoutY="120.0" prefHeight="25.0" prefWidth="77.0" />
+      <Label fx:id="label_label" layoutX="294.0" layoutY="92.0" prefHeight="18.0" prefWidth="14.0" />
+      <TextField fx:id="tx_busca_id" layoutX="299.0" layoutY="118.0" prefHeight="26.0" prefWidth="142.0" />
+      <ImageView fitHeight="96.0" fitWidth="106.0" layoutX="8.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/clientejuridico.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

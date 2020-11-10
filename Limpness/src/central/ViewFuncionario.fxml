@@ -5,33 +5,62 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="444.0" prefWidth="763.0" style="-fx-background-color: #cdc9e4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FuncionarioController">
+<AnchorPane prefHeight="446.0" prefWidth="722.0" style="-fx-background-color: #cdc9e4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FuncionarioController">
    <children>
-      <Button fx:id="btn_adicionar_funcionario" layoutX="275.0" layoutY="183.0" mnemonicParsing="false" onAction="#inserirFuncionario" style="-fx-background-color: #2006b5;" text="ADICIONAR" textFill="WHITE" />
-      <Button fx:id="btn_pesquisar_funcionario" layoutX="561.0" layoutY="96.0" mnemonicParsing="false" onAction="#buscarFuncionario" style="-fx-background-color: #2006b5;" text="PESQUISAR" textFill="WHITE" />
-      <Button fx:id="btn_excluir_funcionario" layoutX="275.0" layoutY="273.0" mnemonicParsing="false" onAction="#deletaFuncionario" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #2006b5;" text="EXCLUIR" textFill="WHITE" />
-      <Button fx:id="btn_alterar_funcionario" layoutX="275.0" layoutY="227.0" mnemonicParsing="false" onAction="#alterarFuncionario" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #2006b5;" text="ALTERAR" textFill="WHITE" />
-      <TextArea fx:id="ta_mostra_funcionario" layoutX="401.0" layoutY="143.0" opacity="0.46" prefHeight="242.0" prefWidth="308.0" />
+      <Button fx:id="btn_adicionar_funcionario" layoutX="16.0" layoutY="393.0" mnemonicParsing="false" onAction="#inserirFuncionario" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #0598ff;" text="ADICIONAR" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn_pesquisar_funcionario" layoutX="444.0" layoutY="108.0" mnemonicParsing="false" onAction="#buscarFuncionario" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: #0598ff;" text="PESQUISAR" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn_excluir_funcionario" layoutX="200.0" layoutY="393.0" mnemonicParsing="false" onAction="#deletaFuncionario" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #0598ff;" text="EXCLUIR" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn_alterar_funcionario" layoutX="108.0" layoutY="393.0" mnemonicParsing="false" onAction="#alterarFuncionario" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #0598ff;" text="ALTERAR" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <TextArea fx:id="ta_mostra_funcionario" layoutX="301.0" layoutY="143.0" opacity="0.46" prefHeight="266.0" prefWidth="408.0" />
       <TextField fx:id="tx_nome_funcionario" layoutX="86.0" layoutY="121.0" promptText="NOME" />
       <TextField fx:id="tx_email_funcionario" layoutX="86.0" layoutY="183.0" promptText="E-MAIL" />
       <TextField fx:id="tx_telefone_funcionario" layoutX="86.0" layoutY="152.0" promptText="TELEFONE" />
       <TextField fx:id="tx_cep_funcionario" layoutX="86.0" layoutY="215.0" promptText="CEP" />
       <TextField fx:id="tx_especialidade_funcionario" layoutX="87.0" layoutY="248.0" promptText="ESPECIALIDADE" />
-      <Button fx:id="btn_sair_funcionario" layoutX="701.0" layoutY="393.0" mnemonicParsing="false" style="-fx-background-color: red;" text="SAIR" textFill="WHITE" />
+      <Button fx:id="btn_sair_funcionario" layoutX="667.0" layoutY="414.0" mnemonicParsing="false" style="-fx-background-color: red;" text="SAIR" textFill="WHITE" />
       <TextField fx:id="tx_salario_funcionario" layoutX="87.0" layoutY="349.0" promptText="SALARIO" />
       <DatePicker fx:id="dp_demss_funcionario" layoutX="87.0" layoutY="316.0" prefHeight="25.0" prefWidth="149.0" promptText="Data demissão" />
       <DatePicker fx:id="dp_admss_funcionario" layoutX="87.0" layoutY="282.0" prefHeight="25.0" prefWidth="149.0" promptText="Data admissão" />
-      <Text fill="#2006b5" layoutX="295.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FUNCIONARIOS" underline="true">
+      <Text layoutX="116.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FUNCIONARIOS" underline="true">
          <font>
-            <Font name="Yu Gothic UI Semibold" size="26.0" />
+            <Font name="Algerian" size="26.0" />
          </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#4d6a9f" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
       </Text>
-      <TextField fx:id="textFildID" layoutX="401.0" layoutY="96.0" />
+      <TextField fx:id="textFildID" layoutX="301.0" layoutY="108.0" prefHeight="26.0" prefWidth="126.0" />
       <Label fx:id="labelLabelID" layoutX="15.0" layoutY="96.0" text="ID" visible="false" />
       <Label fx:id="labelID" layoutX="90.0" layoutY="96.0" visible="false" />
+      <ImageView fitHeight="108.0" fitWidth="200.0" layoutX="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/funcionario.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

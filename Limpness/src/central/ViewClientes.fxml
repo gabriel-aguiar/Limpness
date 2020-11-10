@@ -4,23 +4,59 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="394.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Cliente_FisicoController">
+<AnchorPane prefHeight="360.0" prefWidth="672.0" style="-fx-background-color: #cdc9e4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Cliente_FisicoController">
    <children>
-      <Button fx:id="btn_adicionar_cliente" layoutX="78.0" layoutY="287.0" mnemonicParsing="false" onAction="#inserirClientef" text="ADICIONAR" />
-      <Button fx:id="btn_pesquisar_cliente" layoutX="533.0" layoutY="75.0" mnemonicParsing="false" onAction="#buscarCliente" style="-fx-background-color: #2006b5;" text="PESQUISAR" textFill="#fffefe" />
-      <Button fx:id="btn_excluir_cliente" layoutX="235.0" layoutY="287.0" mnemonicParsing="false" onAction="#deletaPessoa" style="-fx-background-color: #2006b5;" text="EXCLUIR" textFill="WHITE" />
-      <Button fx:id="btn_alterar_cliente" layoutX="163.0" layoutY="287.0" mnemonicParsing="false" onAction="#alterarCliente" text="ALTERAR" />
-      <TextArea fx:id="ta_mostra_cf" layoutX="350.0" layoutY="119.0" opacity="0.46" prefHeight="242.0" prefWidth="260.0" />
+      <Button fx:id="btn_adicionar_cliente" layoutX="16.0" layoutY="299.0" mnemonicParsing="false" onAction="#inserirClientef" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #0598ff;" text="ADICIONAR" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn_pesquisar_cliente" layoutX="447.0" layoutY="64.0" mnemonicParsing="false" onAction="#buscarCliente" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #0598ff;" text="PESQUISAR" textFill="#fffefe">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn_excluir_cliente" layoutX="200.0" layoutY="299.0" mnemonicParsing="false" onAction="#deletaPessoa" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #0598ff;" text="EXCLUIR" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn_alterar_cliente" layoutX="108.0" layoutY="299.0" mnemonicParsing="false" onAction="#alterarCliente" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #0598ff;" text="ALTERAR" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <TextArea fx:id="ta_mostra_cf" layoutX="297.0" layoutY="105.0" opacity="0.46" prefHeight="212.0" prefWidth="359.0" style="-fx-background-color: white;" />
       <TextField fx:id="tx_nome_cliente" layoutX="78.0" layoutY="100.0" promptText="NOME" />
       <TextField fx:id="tx_email_cliente" layoutX="78.0" layoutY="138.0" promptText="E-MAIL" />
       <TextField fx:id="tx_telefone_cliente" layoutX="78.0" layoutY="174.0" promptText="TELEFONE" />
       <TextField fx:id="tx_cpf_cliente" layoutX="78.0" layoutY="211.0" promptText="CPF" />
       <TextField fx:id="tx_cep_cliente" layoutX="78.0" layoutY="246.0" promptText="CEP" />
-      <Button fx:id="btn_sair_cliente" layoutX="658.0" layoutY="341.0" mnemonicParsing="false" text="SAIR" />
-      <TextField fx:id="textFildID" layoutX="350.0" layoutY="75.0" prefHeight="25.0" prefWidth="64.0" />
+      <Button fx:id="btn_sair_cliente" layoutX="617.0" layoutY="326.0" mnemonicParsing="false" style="-fx-background-color: red;" text="SAIR" textFill="WHITE" />
+      <TextField fx:id="textFildID" layoutX="295.0" layoutY="62.0" prefHeight="26.0" prefWidth="126.0" />
       <Label fx:id="labelLabelID" layoutX="78.0" layoutY="48.0" text="ID" visible="false" />
-      <Label fx:id="labelID" layoutX="127.0" layoutY="48.0" visible="false" />
+      <Label fx:id="labelID" layoutX="115.0" layoutY="48.0" prefHeight="18.0" prefWidth="12.0" visible="false" />
+      <Text layoutX="84.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clientes" underline="true">
+         <font>
+            <Font name="Algerian" size="30.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5311111026340061" centerY="0.14885496911201768" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#4d6a9f" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+      <ImageView fitHeight="63.0" fitWidth="79.0" layoutX="10.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/cliente.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

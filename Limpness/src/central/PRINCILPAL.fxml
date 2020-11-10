@@ -4,32 +4,64 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="437.0" prefWidth="731.0" style="-fx-background-color: #cdc9e4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PrincipalController">
+<AnchorPane prefHeight="437.0" prefWidth="722.0" style="-fx-background-color: #cdc9e4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PrincipalController">
    <children>
-      <Text fill="#2006b5" fontSmoothingType="LCD" layoutX="441.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HISTORIA DA EMPRESA" wrappingWidth="230.7669219970703">
+      <Text layoutX="423.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HISTORIA DA EMPRESA" wrappingWidth="230.7669219970703">
          <font>
-            <Font name="Yu Gothic UI Semibold" size="21.0" />
+            <Font name="Algerian" size="20.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.8473282142449882" startY="0.263358778625954">
+               <stops>
+                  <Stop color="#0b067a" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="69.0" style="-fx-background-color: #0598ff;" text="HOME" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="16.0" />
+         </font></Button>
+      <Button layoutX="69.0" mnemonicParsing="false" onAction="#linkclientef" prefHeight="42.0" prefWidth="96.0" style="-fx-background-color: #0598ff;" text="CLIENTES" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <Button layoutX="164.0" mnemonicParsing="false" onAction="#linkclientej" prefHeight="42.0" prefWidth="128.0" style="-fx-background-color: #0598ff;" text="CLIENTES JURIDICOS" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="10.0" />
+         </font></Button>
+      <Button layoutX="292.0" mnemonicParsing="false" onAction="#linkorcamento" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: #0598ff;" text="Orçamento" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="14.0" />
+         </font></Button>
+      <Button layoutX="406.0" mnemonicParsing="false" onAction="#linkfuncionario" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: #0598ff;" text="FUNCIONARIO" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="14.0" />
+         </font></Button>
+      <Button layoutX="520.0" mnemonicParsing="false" onAction="#linkequipamento" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: #0598ff;" text="Equipamento" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="14.0" />
+         </font></Button>
+      <Button layoutX="634.0" mnemonicParsing="false" onAction="#linkdespesa" prefHeight="42.0" prefWidth="96.0" style="-fx-background-color: white; -fx-background-color: #0598ff;" text="Despesas" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <Text fill="#2a292e" fontSmoothingType="LCD" layoutX="346.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A LIMpness É UMA STARTUP CRIADA EM CURITIBA COM ÍNICIO DE OPERAÇÃO EM 2020, USAMOS A TECNOLOGIA PARA FACILITAR A VIDA DE PESSOAS QUE QUEREM UM SERVIÇO DE QUALIDADE EM APENAS ALGUNS CLICKS, ASSIM A LIMPEZA SERÁ RESOLVIDA ATRAVÉS DA NOSSA PLATAFORMA." textAlignment="JUSTIFY" wrappingWidth="348.13671875">
+         <font>
+            <Font name="Algerian" size="18.0" />
          </font>
       </Text>
-      <ImageView fitHeight="211.0" fitWidth="319.0" layoutX="22.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true" rotate="-10.8">
+      <AnchorPane layoutX="-6.0" layoutY="381.0" prefHeight="56.0" prefWidth="735.0" style="-fx-background-color: #0598ff;" />
+      <ImageView fitHeight="186.0" fitWidth="332.0" layoutX="-1.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../Pictures/LIMPNESS.jpg" />
+            <Image url="@../../img/LIMPNESS.jpg" />
          </image>
       </ImageView>
-      <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="69.0" style="-fx-background-color: white;" text="HOME" textFill="#2006b5" />
-      <Button layoutX="69.0" mnemonicParsing="false" onAction="#linkclientef" prefHeight="42.0" prefWidth="96.0" style="-fx-background-color: white;" text="CLIENTES" textFill="#2006b5" />
-      <Button layoutX="164.0" mnemonicParsing="false" onAction="#linkclientej" prefHeight="42.0" prefWidth="128.0" style="-fx-background-color: white;" text="CLIENTES JURIDICOS" textFill="#2006b5" />
-      <Button layoutX="292.0" mnemonicParsing="false" onAction="#linkorcamento" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: white;" text="ORÇAMENTO" textFill="#2006b5" />
-      <Button layoutX="406.0" mnemonicParsing="false" onAction="#linkfuncionario" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: white;" text="FUNCIONARIO" textFill="#2006b5" />
-      <Button layoutX="520.0" mnemonicParsing="false" onAction="#linkequipamento" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: white;" text="EQUIPAMENTO" textFill="#2006b5" />
-      <Button layoutX="634.0" mnemonicParsing="false" onAction="#linkdespesa" prefHeight="42.0" prefWidth="96.0" style="-fx-background-color: white;" text="DESPESAS" textFill="#2006b5" />
-      <Text fill="#2006b5" layoutX="373.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A LIMPNESS É UMA STARTUP CRIADA EM CURITIBA COM ÍNICIO DE OPERAÇÃO EM 2020, USAMOS A TECNOLOGIA PARA FACILITAR A VIDA DE PESSOAS QUE QUEREM UM SERVIÇO DE QUALIDADE EM APENAS ALGUNS CLICKS, ASSIM A LIMPEZA SERÁ RESOLVIDA ATRAVÉS DA NOSSA PLATAFORMA." textAlignment="JUSTIFY" wrappingWidth="348.13671875">
-         <font>
-            <Font name="Yu Gothic UI Semilight" size="18.0" />
-         </font>
-      </Text>
    </children>
 </AnchorPane>

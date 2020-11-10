@@ -4,28 +4,57 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="393.0" prefWidth="742.0" style="-fx-background-color: #cdc9e4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EquipamentoController">
+<AnchorPane prefHeight="383.0" prefWidth="699.0" style="-fx-background-color: #cdc9e4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EquipamentoController">
    <children>
-      <Button fx:id="btn_adicionar_equipamento" layoutX="43.0" layoutY="321.0" mnemonicParsing="false" onAction="#inserirEquipamento" style="-fx-background-color: #2006b5;" text="ADICIONAR" textFill="#fffefe" />
-      <Button fx:id="btn_pesquisar_equipamento" layoutX="369.0" layoutY="98.0" mnemonicParsing="false" onAction="#buscarEquipamento" style="-fx-background-color: #2006b5;" text="PESQUISAR" textFill="WHITE" />
-      <Button fx:id="btn_excluir_equipamento" layoutX="142.0" layoutY="321.0" mnemonicParsing="false" onAction="#excluiEquipamento" style="-fx-background-color: #2006b5;" text="EXCLUIR" textFill="WHITE" />
-      <Button fx:id="btn_alterar_equipamento" layoutX="217.0" layoutY="321.0" mnemonicParsing="false" onAction="#AlterarEquipamento" style="-fx-background-color: #2006b5;" text="ALTERAR" textFill="WHITE" />
-      <TextArea fx:id="ta_mostra_equipamento" layoutX="369.0" layoutY="136.0" opacity="0.46" prefHeight="217.0" prefWidth="270.0" style="-fx-background-color: white;" />
-      <TextField fx:id="tx_nome_equipamento" layoutX="68.0" layoutY="133.0" promptText="NOME" />
-      <TextField fx:id="tx_qnt_equipamento_equipamento" layoutX="68.0" layoutY="171.0" prefHeight="26.0" prefWidth="216.0" promptText="QUANTIDADE DE EQUIPAMENTOS" />
-      <TextField fx:id="tx_tipo_equipamento_equipamento" layoutX="68.0" layoutY="207.0" prefWidth="160.0" promptText="TIPO DE EQUIPAMENTO" />
-      <TextField fx:id="tx_id_funcionario_equipamento" layoutX="68.0" layoutY="244.0" promptText="ID DO FUNCIONARIO" />
-      <Button fx:id="btn_sair_equipamento" layoutX="669.0" layoutY="341.0" mnemonicParsing="false" style="-fx-background-color: red;" text="SAIR" textFill="WHITE" />
-      <Text fill="#2006b5" layoutX="74.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EQUIPAMENTOS" textAlignment="CENTER" underline="true" wrappingWidth="270.00000675581396">
+      <Button fx:id="btn_adicionar_equipamento" layoutX="16.0" layoutY="321.0" mnemonicParsing="false" onAction="#inserirEquipamento" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #0598ff;" text="ADICIONAR" textFill="#fffefe">
          <font>
-            <Font name="Yu Gothic UI Semibold" size="28.0" />
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn_pesquisar_equipamento" layoutX="439.0" layoutY="97.0" mnemonicParsing="false" onAction="#buscarEquipamento" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: #0598ff;" text="PESQUISAR" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn_excluir_equipamento" layoutX="200.0" layoutY="321.0" mnemonicParsing="false" onAction="#excluiEquipamento" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #0598ff;" text="EXCLUIR" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn_alterar_equipamento" layoutX="108.0" layoutY="321.0" mnemonicParsing="false" onAction="#AlterarEquipamento" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #0598ff;" text="ALTERAR" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <TextArea fx:id="ta_mostra_equipamento" layoutX="299.0" layoutY="136.0" opacity="0.46" prefHeight="208.0" prefWidth="380.0" style="-fx-background-color: white;" />
+      <TextField fx:id="tx_nome_equipamento" layoutX="68.0" layoutY="133.0" promptText="NOME" />
+      <TextField fx:id="tx_qnt_equipamento_equipamento" layoutX="68.0" layoutY="171.0" prefHeight="26.0" prefWidth="198.0" promptText="QUANTIDADE DE EQUIPAMENTOS" />
+      <TextField fx:id="tx_tipo_equipamento_equipamento" layoutX="68.0" layoutY="207.0" prefHeight="26.0" prefWidth="149.0" promptText="TIPO DE EQUIPAMENTO" />
+      <TextField fx:id="tx_id_funcionario_equipamento" layoutX="68.0" layoutY="244.0" promptText="ID DO FUNCIONARIO" />
+      <Button fx:id="btn_sair_equipamento" layoutX="638.0" layoutY="350.0" mnemonicParsing="false" style="-fx-background-color: red;" text="SAIR" textFill="WHITE" />
+      <Text layoutX="128.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EQUIPAMENTOS" underline="true" wrappingWidth="240.3999701347202">
+         <font>
+            <Font name="Algerian" size="30.0" />
          </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#2006b5" />
+                  <Stop color="#4d6a9f" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
       </Text>
       <Label fx:id="label_label" layoutX="68.0" layoutY="102.0" />
-      <TextField fx:id="tx_busca_id" layoutX="465.0" layoutY="98.0" prefHeight="25.0" prefWidth="94.0" />
+      <TextField fx:id="tx_busca_id" layoutX="299.0" layoutY="97.0" prefHeight="26.0" prefWidth="126.0" />
+      <ImageView fitHeight="121.0" fitWidth="150.0" layoutX="8.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/equipamento.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

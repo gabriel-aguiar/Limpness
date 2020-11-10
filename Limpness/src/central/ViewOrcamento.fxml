@@ -4,30 +4,59 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="409.0" prefWidth="766.0" style="-fx-background-color: #cdc9e4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrcamentoController">
+<AnchorPane prefHeight="409.0" prefWidth="688.0" style="-fx-background-color: #cdc9e4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrcamentoController">
    <children>
-      <Button fx:id="btn_adicionar_orcamento" layoutX="26.0" layoutY="327.0" mnemonicParsing="false" onAction="#inserirOrcamento" prefHeight="26.0" prefWidth="87.0" style="-fx-background-color: #2006b5;" text="ADICIONAR" textFill="WHITE" />
-      <Button fx:id="btn_pesquisar_orcamento" layoutX="383.0" layoutY="87.0" mnemonicParsing="false" onAction="#buscarOrcamento" style="-fx-background-color: #2006b5;" text="PESQUISAR" textFill="WHITE" />
-      <Button fx:id="btn_excluir_orcamento" layoutX="138.0" layoutY="327.0" mnemonicParsing="false" onAction="#excluiOrcamento" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: #2006b5;" text="EXCLUIR" textFill="WHITE" />
-      <Button fx:id="btn_alterar_orcamento" layoutX="233.0" layoutY="327.0" mnemonicParsing="false" onAction="#AlterarOrcamento" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: #2006b5;" text="ALTERAR" textFill="WHITE" />
-      <TextArea fx:id="ta_mostra_orcamento" layoutX="362.0" layoutY="131.0" prefHeight="242.0" prefWidth="314.0" />
-      <TextField fx:id="tx_tipo_local_orcamento" layoutX="84.0" layoutY="100.0" promptText="TIPO DE LOCAL" />
-      <TextField fx:id="tx_tipo_limpeza_orcamento" layoutX="84.0" layoutY="134.0" promptText="TIPO DE LIMPEZA" />
-      <TextField fx:id="tx_qnt_funcionario_orcamento" layoutX="84.0" layoutY="171.0" prefHeight="26.0" prefWidth="149.0" promptText="QNT DE FUNCIONARIOS" />
-      <TextField fx:id="tx_cep_orcamento" layoutX="84.0" layoutY="207.0" promptText="ENDEREÇO" />
-      <Button fx:id="btn_sair_orcamento" layoutX="711.0" layoutY="353.0" mnemonicParsing="false" style="-fx-background-color: red;" text="SAIR" textFill="WHITE" />
-      <TextField fx:id="tx_id_cliente_orcamento" layoutX="84.0" layoutY="244.0" promptText="ID DO CLIENTE" />
-      <TextField fx:id="tx_busca_id_orcamento" layoutX="477.0" layoutY="87.0" prefHeight="26.0" prefWidth="94.0" />
-      <Label fx:id="label_label" layoutX="81.0" layoutY="66.0" prefHeight="17.0" prefWidth="12.0" />
-      <TextField fx:id="tx_id_cliente_juridico" layoutX="84.0" layoutY="280.0" promptText="ID DO CLIENTE JURIDICO" />
-      <Text fill="#2006b5" layoutX="113.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ORÇAMENTO" underline="true">
+      <Button fx:id="btn_adicionar_orcamento" layoutX="16.0" layoutY="352.0" mnemonicParsing="false" onAction="#inserirOrcamento" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #0598ff;" text="ADICIONAR" textFill="WHITE">
          <font>
-            <Font name="Yu Gothic UI Semibold" size="26.0" />
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn_pesquisar_orcamento" layoutX="436.0" layoutY="95.0" mnemonicParsing="false" onAction="#buscarOrcamento" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: #0598ff;" text="PESQUISAR" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn_excluir_orcamento" layoutX="108.0" layoutY="352.0" mnemonicParsing="false" onAction="#excluiOrcamento" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #0598ff;" text="EXCLUIR" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn_alterar_orcamento" layoutX="200.0" layoutY="352.0" mnemonicParsing="false" onAction="#AlterarOrcamento" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #0598ff;" text="ALTERAR" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="12.0" />
+         </font></Button>
+      <TextArea fx:id="ta_mostra_orcamento" layoutX="300.0" layoutY="131.0" prefHeight="242.0" prefWidth="376.0" />
+      <TextField fx:id="tx_tipo_local_orcamento" layoutX="83.0" layoutY="119.0" promptText="TIPO DE LOCAL" />
+      <TextField fx:id="tx_tipo_limpeza_orcamento" layoutX="83.0" layoutY="153.0" promptText="TIPO DE LIMPEZA" />
+      <TextField fx:id="tx_qnt_funcionario_orcamento" layoutX="83.0" layoutY="190.0" prefHeight="26.0" prefWidth="149.0" promptText="QNT DE FUNCIONARIOS" />
+      <TextField fx:id="tx_cep_orcamento" layoutX="83.0" layoutY="226.0" promptText="ENDEREÇO" />
+      <Button fx:id="btn_sair_orcamento" layoutX="637.0" layoutY="378.0" mnemonicParsing="false" style="-fx-background-color: red;" text="SAIR" textFill="WHITE" />
+      <TextField fx:id="tx_id_cliente_orcamento" layoutX="83.0" layoutY="263.0" promptText="ID DO CLIENTE" />
+      <TextField fx:id="tx_busca_id_orcamento" layoutX="300.0" layoutY="95.0" prefHeight="26.0" prefWidth="126.0" />
+      <Label fx:id="label_label" layoutX="81.0" layoutY="66.0" prefHeight="17.0" prefWidth="12.0" />
+      <TextField fx:id="tx_id_cliente_juridico" layoutX="83.0" layoutY="299.0" promptText="ID DO CLIENTE JURIDICO" />
+      <Text layoutX="107.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ORÇAMENTO" underline="true">
+         <font>
+            <Font name="Algerian" size="30.0" />
          </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#4d6a9f" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
       </Text>
+      <ImageView fitHeight="98.0" fitWidth="108.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/orcamento.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

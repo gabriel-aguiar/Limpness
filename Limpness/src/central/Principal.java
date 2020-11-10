@@ -20,7 +20,7 @@ public class Principal extends Application{
 	public void start(Stage stage) {
 
 		try {
-			AnchorPane pane = (AnchorPane) FXMLLoader.load(getClass().getResource("PRINCILPAL.fxml"));
+			AnchorPane pane = (AnchorPane) FXMLLoader.load(getClass().getResource("ViewLogin.fxml"));
 			Scene sc = new Scene(pane);
 			stage.setScene(sc);
 			stage.show();

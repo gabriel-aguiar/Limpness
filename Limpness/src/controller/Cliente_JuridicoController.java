@@ -1,8 +1,10 @@
 package controller;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.List;
 import java.util.Optional;
+import java.util.ResourceBundle;
 
 import dao.Cliente_JuridicoDao;
 import dao.EquipamentoDao;
@@ -12,6 +14,7 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -23,7 +26,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class Cliente_JuridicoController extends Application{
+public class Cliente_JuridicoController extends Application implements Initializable{
 
 	
     @FXML
@@ -192,6 +195,12 @@ public class Cliente_JuridicoController extends Application{
 	            e.printStackTrace();
 	        }   
 		
+	}
+	
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		
+		listaCliente_Juridico();
 	}
 	
 }
